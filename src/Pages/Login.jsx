@@ -1,8 +1,20 @@
+import  {useState} from 'react'
+
 const Login = () => {
+  // const emailinp = document.getElementById('email')
+  // const passwordinp = document.getElementById('password')
+   const [User,setUser] = useState()
+  const handleInput = (e) => {
+    setUser(e.target.value )
+    e.preventDefault();
+  }
+  const handleClick = () => {
+    console.log(User)
+  }
    return (
     <div className="w-[40%] py-[20px] bg-neutral-200 mx-auto mt-[5%]">
       <div className="p-4">
-        <h2 className="font-bold text-[2.5rem] text-[#108d87]">Welcome Back</h2>
+        <h2 className="font-bold text-[2.5rem] text-black">Welcome Back</h2>
         <p className="text-lg text-gray-400 font-bold">
           Please login to your account to continue
         </p>
@@ -18,6 +30,7 @@ const Login = () => {
             id="email"
             className="w-full p-3 mt-2 border border-gray-300 rounded-md"
             placeholder="Enter your email"
+            onInput={handleInput}
           />
         </div>
         <div className="p-4 relative">
@@ -29,12 +42,13 @@ const Login = () => {
             id="password"
             className="w-full p-3 mt-2 border border-gray-300 rounded-md"
             placeholder="Enter your password"
+            type='password'
           />
           <span className="absolute bottom-[30px] right-[30px]">
           </span>
         </div>
         <div className="p-4">
-          <button className="w-full p-4 text-xl bg-[#108d87] text-white font-bold rounded-md hover:text-2xl">
+          <button className="w-full p-2 text-xl bg-[#0A1A2F] text-white font-bold rounded-md hover:text-2xl" onClick={handleClick}>
             Login
           </button>
         </div>
