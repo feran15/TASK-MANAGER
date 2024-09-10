@@ -12,8 +12,10 @@ const Login = () => {
     console.log(User)
   }
    return (
-    <div className="w-[40%] py-[20px] bg-neutral-200 mx-auto mt-[5%]">
-      <div className="p-4">
+    <div className="bg-[#0A1A2F] w-50 p-3 border-rounded-md">
+        <h3 className='p-8 text-white font-bold text-2xl cursor-pointer'>E-TaskManagement</h3>
+      <div className='w-[40%] py-[20px] bg-neutral-200  mx-auto mt-[5%]'>
+      <div className="p-4 ">
         <h2 className="font-bold text-[2.5rem] text-black">Welcome Back</h2>
         <p className="text-lg text-gray-400 font-bold">
           Please login to your account to continue
@@ -53,6 +55,10 @@ const Login = () => {
           </button>
         </div>
       </form>
+      </div>
+      <div className="img-overlay">
+        <img src="/map.png" alt="" />
+      </div>
     </div>
   );
 };

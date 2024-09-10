@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
 const Nav = () => {
+  const navigate = useNavigate()
+  const gotoLoginPage = () => {
+    navigate('/Login')
+  }
   return (
     <div className="flex justify-between items-center bg-[white] p-1 relative">
       <div className="basis-[20%]">
@@ -23,7 +28,7 @@ const Nav = () => {
       <div className="basis-[20%] flex justify-center gap-5 items-center">
         <div className="bg-white border-2 px-4 py-2 border-[white] rounded-lg ">
           <p className="text-[white] bg-black px-4 border-[none] rounded-md py-1 font-bold text-xl">
-            <Link to={"/login"}>Login</Link>
+            <button onClick={gotoLoginPage}>Login</button>
           </p>
         </div>
         <div className="bg-[red] border-2 px-4 py-2 border-[none] rounded-lg hover:bg-white">
