@@ -23,13 +23,6 @@ function AppContent() {
       {/* Conditional rendering of Pages component */}
       {showPages && <Pages />}
 
-      {/* Buttons to navigate between routes */}
-      {/* <div>
-        <button onClick={() => navigate('/login')}>Go to Login</button>
-        <button onClick={() => navigate('/register')}>Go to Register</button>
-        <button onClick={() => navigate('/')}>Go to Home</button>
-      </div> */}
-
       {/* Route definitions */}
       <Routes>
         <Route path="/register" element={<Register />} />
